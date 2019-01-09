@@ -4,7 +4,14 @@ spring:
   application:
     name: config-server
   profiles:
+#    active: native
     active: dev
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: E:/workspace/damontest/config/dev
+#          default-label: dev
   cloud:
     config:
       server:
@@ -14,6 +21,7 @@ spring:
           password: cl964251259
           search-paths: ${spring.profiles.active}
           basedir: E:/workspace/temp-git
+          default-label: dev
   security:
     user:
       name: damon
